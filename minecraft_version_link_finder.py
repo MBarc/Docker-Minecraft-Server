@@ -14,6 +14,9 @@ userInputRam = str(sys.argv[2])
 
 # This Minecraft URL gives data for each version of Minecraft
 r = requests.get("https://launchermeta.mojang.com/mc/game/version_manifest.json")
+
+raise Exception(r.status_code)
+
 output = r.json()
 
 url = False
