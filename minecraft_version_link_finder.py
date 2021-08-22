@@ -11,8 +11,8 @@ import subprocess
 # Dockerfile ENV variables go here
 # Example RUN command: RUN python3 minecraft_version_link_finder.py = 1.17 = 2:
 #Note the = at indexes 1 and 3, that's why sys.argv is for indexes 2 and 4
-userInputVersion = str(sys.argv[2])
-userInputRam = str(sys.argv[4])
+userInputVersion = str(sys.argv[1])
+userInputRam = str(sys.argv[2])
 
 # This Minecraft URL gives data for each version of Minecraft
 r = requests.get("https://launchermeta.mojang.com/mc/game/version_manifest.json")
