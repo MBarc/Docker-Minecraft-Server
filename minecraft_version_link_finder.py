@@ -19,11 +19,11 @@ output = r.json()
 
 url = False
 for version in output["versions"]:
-
-    raise Exception(f"{type(version['id'])} - {type(userInputVersion)}")
     
     if userInputVersion == version["id"]:
 
+        raise Exception(f"{version['id']} - {userInputVersion}")
+        
         # This url tells us where we can download both the client and server jarfiles
         url = version["url"]
         r = requests.get(version["url"])
