@@ -22,8 +22,6 @@ output = r.json()
 url = False
 for version in output["versions"]:
     
-    print(f"{version['id']} = {userInputVersion}: {version['id'] == userInputVersion}")
-    
     if userInputVersion == version["id"]:
         
         # This url tells us where we can download both the client and server jarfiles
@@ -35,4 +33,4 @@ for version in output["versions"]:
         url = output["downloads"]["server"]["url"]
 
 subprocess.run(["wget", url, "-O", "/server.jar"], check=True)
-subprocess.run(["java", f"-Xms{userInputRam}G", f"-Xmx{userInputRam}G", "-jar", "server.jar", "nogui"], check=True)
+#subprocess.run(["java", f"-Xms{userInputRam}G", f"-Xmx{userInputRam}G", "-jar", "server.jar", "nogui"], check=True)
