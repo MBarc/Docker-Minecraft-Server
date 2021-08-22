@@ -25,8 +25,6 @@ for version in output["versions"]:
     print(f"{version['id']} = {userInputVersion}: {version['id'] == userInputVersion}")
     
     if userInputVersion == version["id"]:
-
-        raise Exception(f"{version['id']} - {userInputVersion}")
         
         # This url tells us where we can download both the client and server jarfiles
         url = version["url"]
