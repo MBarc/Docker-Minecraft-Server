@@ -35,5 +35,6 @@ for version in output["versions"]:
         url = output["downloads"]["server"]["url"]
 
 
-subprocess.run(f"wget {url} -O /server.jar", check=True)
+#subprocess.run(f"wget {url} -O /server.jar", check=True)
+subprocess.run(["wget", url, "-O", "/server.jar"], check=True)
 subprocess.run(f"java -Xms{userInputRam}G -Xmx{userInputRam}G -jar server.jar nogui", check=True)
