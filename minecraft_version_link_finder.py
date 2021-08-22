@@ -20,6 +20,8 @@ output = r.json()
 url = False
 for version in output["versions"]:
     
+    print(f"{version['id'] == userInputVersion}")
+    
     if userInputVersion == version["id"]:
 
         raise Exception(f"{version['id']} - {userInputVersion}")
