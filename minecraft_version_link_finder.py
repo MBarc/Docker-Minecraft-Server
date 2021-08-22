@@ -17,11 +17,11 @@ r = requests.get("https://launchermeta.mojang.com/mc/game/version_manifest.json"
 
 output = r.json()
 
-raise Exception(output)
-
 url = False
 for version in output["versions"]:
 
+    raise Exception(f"{type(version['id'])} - {type(userInputVersion)}")
+    
     if userInputVersion == version["id"]:
 
         # This url tells us where we can download both the client and server jarfiles
