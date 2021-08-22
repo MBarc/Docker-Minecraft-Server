@@ -26,8 +26,8 @@ for version in output["versions"]:
         r = requests.get(version["url"])
         output = r.json()
 
-# This url is the actual server.jar download link
-url = output["downloads"]["server"]["url"]
+        # This url is the actual server.jar download link
+        url = output["downloads"]["server"]["url"]
 
 
 subprocess.run(f"wget {url} -O /server.jar", check=True)
