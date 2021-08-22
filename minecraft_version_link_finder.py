@@ -20,7 +20,7 @@ output = r.json()
 url = False
 for version in output["versions"]:
     
-    print(f"{version['id'] == userInputVersion}")
+    print(f"{version["id"]} = {userInputVersion}: {version['id'] == userInputVersion}")
     
     if userInputVersion == version["id"]:
 
